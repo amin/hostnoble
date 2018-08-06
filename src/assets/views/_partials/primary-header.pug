@@ -11,8 +11,16 @@ header.primary-header
 
     nav.primary-header__navigation
       ul.primary-header__list.wrap
-        li: a(href="#/" class="primary-header__list-item") Home
-        li: a(href="#/" class="primary-header__list-item") Web Hosting
-        li: a(href="#/" class="primary-header__list-item") Domains
-        li: a(href="#/" class="primary-header__list-item") Products
-        li: a(href="#/" class="primary-header__list-item") About
+        li
+          a(href="#/" class="primary-header__list-item") Home
+        li
+          a(href="#/" class="primary-header__list-item") Web Hosting
+        li
+          a(href="#/" class="primary-header__list-item") Domains
+        li
+          a(href="#/" class="primary-header__list-item") Products
+          ul.primary-header__list.primary-header__list--nested
+            li: a(href="#/" class="primary-header__list-item primary-header__list-item--nested") SSL Certificates
+            li: a(href="#/" class="primary-header__list-item primary-header__list-item--nested") DDoS Protection
+        li
+          a(href="#/" class="primary-header__list-item") About
