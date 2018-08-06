@@ -1,0 +1,19 @@
+.primary-banner
+  margin-top: -5em
+  min-height: 100%
+  min-width: 100%
+  z-index: -100
+
+  background:
+    image: url('/assets/images/primary-banner__img.jpg')
+    position: center
+    size: cover
+    attachment: fixed
+    repeat: no-repeat
+  +e('content')
+    padding-top: 9em
+
++respond-above('md')
+  .primary-banner
+    min-height: 900px
+    margin-top: -6.5em
