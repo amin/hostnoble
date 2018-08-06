@@ -3,6 +3,7 @@
   min-height: 100%
   min-width: 100%
   z-index: -100
+  display: flex
 
   background:
     image: url('/assets/images/primary-banner__img.jpg')
@@ -11,9 +12,61 @@
     attachment: fixed
     repeat: no-repeat
   +e('content')
-    padding-top: 9em
+    display: flex
+    align-items: center
+    text-align: center
+    margin-top: 5em
+    justify-content: center
+
+  +e('text')
+    color: #fff
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  +e('h1')
+
+    font-weight: 300
+    letter-spacing: 0.1em
+    line-height: 1.5em
+    text-transform: capitalize
+
+  +e('p')
+    margin: 1.75em 0
+    font-size: 1.2em
+    line-height: 1.75em
+    font-weight: 300
+    letter-spacing: 0.1em
+    color: #BFBBBB
+
+  +e('link')
+    color: #f2f2f2
+    text-decoration: none
+    &:hover
+      background: rgba(14, 35, 64, 1)
+
+    line-height: 1.75em
+    letter-spacing: 0.125em
+    text-transform: uppercase
+    position: relative
+    background: rgba(14, 35, 64, 0.8)
+    align-self: center
+    border-left: 0.75em solid #1B467F
+    font-weight: 300
+    border-radius: 0.25em
+    padding: 0.75em 1.5em
 
 +respond-above('md')
   .primary-banner
-    min-height: 900px
+    min-height: 600px
     margin-top: -6.5em
+    +e('content')
+      text-align: left
+      justify-content: flex-start
+    +e('link')
+      align-self: start
+
+
++respond-above('xlg')
+  .primary-banner
+    min-height: 900px
