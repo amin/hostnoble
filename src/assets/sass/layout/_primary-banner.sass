@@ -99,12 +99,12 @@
       padding: 2.5em
       border-top-left-radius: 5px
       border-top-right-radius: 5px
+
+
     +e('deal')
       display: flex
       flex-direction: column
-
-
-      margin: 3em 0
+      margin: 4em 0
     +e('deal-feature')
       text-transform: uppercase
       color: #f2f2f2
@@ -151,4 +151,6 @@
 
 +respond-above('xlg')
   .primary-banner
-    min-height: 900px
+    min-height: 750px
+    +e('deal')
+      margin: 1em 0
