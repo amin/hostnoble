@@ -1,0 +1,40 @@
+.partners
+  background: #FAFAFA
+  width: 100%
+  overflow: hidden
+  +e('wrap')
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 7em
+    svg
+
+      height: auto
+      &.cloudlinux
+        width: 260px
+      &.wordpress
+        width: 70px
+      &.joomla
+        width: 70px
+      &.litespeed
+        width: 210px
+  +e('seperator')
+    display: none
+
++respond-above('md')
+  .partners
+    +e('wrap')
+      margin: auto
+      width: 90%
+      svg
+        width: 180px
+    +e('seperator')
+      display: block
+      height: 40px
+      width: 1px
+      background: #dfdfdf
+
++respond-above('xlg')
+  .partners
+    +e('wrap')
+      width: 55%
