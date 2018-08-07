@@ -56,13 +56,95 @@
     border-radius: 0.25em
     padding: 0.75em 1.5em
 
+  +e('deal')
+    display: none
+
 +respond-above('md')
   .primary-banner
     min-height: 600px
     margin-top: -6.5em
+    +e('deal-text')
+      text-transform: uppercase
+      font-weight: 40400
+      letter-spacing: 0.125em
+    +e('deal-wrap')
+      position: absolute
+      background: #613c17
+      padding: 0.5em 1em
+      top: 50%
+      transform: translateY(-50%)
+      left: -1.7em
+      box-sizing: border-box
+      text-transform: uppercase
+      letter-spacing: 0.2em
+      font-weight: 400
+      font-size: 1em
+      z-index: 30
+      &::after
+        content: ''
+        position: absolute
+        border-style: solid
+        border-width: 0 1.7em 1.45em 0
+        border-color: transparent #3e260e transparent transparent
+        top: 100%
+        left: 0
+        z-index: 20
+
+
+      color: #f2f2f2
+      z-index: 100
+    +e('deal-header')
+      position: relative
+      background: rgba(17, 35, 60, 0.5)
+      padding: 2.5em
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+    +e('deal')
+      display: flex
+      flex-direction: column
+
+
+      margin: 3em 0
+    +e('deal-feature')
+      text-transform: uppercase
+      color: #f2f2f2
+      letter-spacing: 0.1em
+      font-size: 1em
+      font-weight: 400
+      +m('first')
+        margin-top: 1.5em
+      background: #204372
+      padding: 1em 0
+      margin-bottom: 1.5em
+      width: 75%
+
+    +e('deal-box')
+      flex-direction: column
+      justify-content: space-between
+      text-align: center
+      align-items: center
+      display: flex
+      background: rgba(14, 35, 64, 1)
+
+      width: 330px
+    +e('deal-sign-up')
+      padding: 1em 0
+      width: 100%
+      letter-spacing: 0.1em
+      font-weight: 400
+      color: #f2f2f2
+      background: #367261
+      text-align: center
+      text-transform: uppercase
+      text-decoration: none
+      font-size: 1em
+      &:hover
+        background: #24584a
+      border-bottom: 0.5em solid #184F3E
+
     +e('content')
       text-align: left
-      justify-content: flex-start
+      justify-content: space-between
     +e('link')
       align-self: start
 

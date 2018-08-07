@@ -20,10 +20,33 @@
     width: 36px
 
   +e('button')
-    height: 2.5em
-    width: 2.5em
-    background: red
-
+    height: 1.2em
+    width: 2em
+    position: relative
+    &::after
+      content: 'Menu'
+      position: absolute
+      left: 100%
+      top: 50%
+      transform: translateY(-50%)
+      margin-left: 1em
+      text-transform: uppercase
+      color: #f2f2f2
+      letter-spacing: 0.2em
+      font-weight: 300
+  +e('button-line')
+    position: absolute
+    min-height: 0.15em
+    width: 100%
+    background: #BFBBBB
+    +m('top')
+      top: 0
+    +m('center')
+      display: none
+      top: 50%
+      transform: translateY(-50%)
+    +m('bottom')
+      bottom: 0
 +respond-above('md')
   .primary-header
     +e('logo')
