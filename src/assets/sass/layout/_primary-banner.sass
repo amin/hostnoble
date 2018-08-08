@@ -12,8 +12,11 @@
     size: cover
     attachment: fixed
     repeat: no-repeat
+  +e('crown')
+    margin-bottom: 0.5em
   +e('content')
     display: flex
+    flex-direction: column
     align-items: center
     text-align: center
     justify-content: center
@@ -64,6 +67,8 @@
     min-height: 600px
     height: 750px
     margin-top: -6.5em
+    +e('crown')
+      display: none
     +e('deal-text')
       text-transform: uppercase
       font-weight: 40400
@@ -101,7 +106,26 @@
       border-top-left-radius: 5px
       border-top-right-radius: 5px
 
-
+    +e('deal-price')
+      span
+        font-size: 1.75em
+        position: relative
+        color: #fff
+      position: absolute
+      display: flex
+      font-size: 0.8em
+      flex-direction: column
+      text-align: center
+      padding: 1em 2.5em
+      background: #204372
+      font-weight: 400
+      letter-spacing: 0.1em
+      color: #BFBBBB
+      border-radius: 5px
+      right: -2em
+      top: -1em
+      &::after
+        content: '/Month'
     +e('deal')
       display: flex
       flex-direction: column
@@ -147,6 +171,7 @@
     +e('content')
       text-align: left
       justify-content: space-between
+      flex-direction: row
     +e('link')
       align-self: start
       margin-right: auto

@@ -7,32 +7,33 @@
     justify-content: space-between
     align-items: center
     height: 7em
+    width: 90%
+    margin: auto
     svg
-
+      width: 150px
       height: auto
-      &.cloudlinux
-        width: 260px
-      &.wordpress
-        width: 70px
-      &.joomla
-        width: 70px
-      &.litespeed
-        width: 210px
   +e('seperator')
-    display: none
+    display: block
+    height: 40px
+    width: 1px
+    background: #dfdfdf
 
 +respond-above('md')
   .partners
     +e('wrap')
       margin: auto
+
       width: 90%
       svg
         width: 180px
-    +e('seperator')
-      display: block
-      height: 40px
-      width: 1px
-      background: #dfdfdf
+        &.cloudlinux
+          width: 260px
+        &.wordpress
+          width: 70px
+        &.joomla
+          width: 70px
+        &.litespeed
+          width: 210px
 
 +respond-above('lg')
   .partners
