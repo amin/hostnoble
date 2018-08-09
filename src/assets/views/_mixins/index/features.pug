@@ -1,0 +1,12 @@
+mixin __item(imageURL, title)
+  .index-features__item
+    .index-features__image
+      img(src="https://www.bleepstatic.com/download/product-logos//2017/04/27/icon1493327549.png" alt="")
+    
+    h3.index-features__item-title= title
+    
+    .index-features__text
+      if block
+        block
+      else
+        | Nothing to see here.
