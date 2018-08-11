@@ -1,0 +1,57 @@
+.incentive
+  padding: 5em 0
+
+.incentive__wrap
+  display: flex
+  flex-direction: column
+  margin-bottom: 3em
+
+.incentive__wrap--last
+  margin-bottom: 0
+
+.incentive-feature
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  margin-bottom: 4em
+
+.incentive__line
+  display: none
+.incentive__feature--last
+  margin-bottom: 0
+
+.incentive-feature__image
+  margin-bottom: 1em
+
+.incentive-feature__title
+  font-weight: 400
+  margin-bottom: 0.5em
+
+.incentive-feature__text
+  line-height: 1.5em
+  letter-spacing: 0.1em
+  font-weight: 300
+
++respond-above('md')
+  .incentive__wrap
+    display: flex
+    width: 45%
+    flex-direction: column
+  .incentive__wrapper
+    display: flex
+    justify-content: space-between
+  .incentive-feature
+    flex-direction: row
+    text-align: left
+  .incentive-feature__image
+    margin-bottom: 0
+    margin-right: 2.5em
+
+  .incentive__line
+    display: block
+    min-height: 100%
+    width: 1px
+    opacity: 0.5
+    background: #c7c7c7
