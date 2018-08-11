@@ -1,0 +1,84 @@
+.map
+
+  padding: 3em 0
+  background:
+    color: #264E85
+  h2, .index-features__description
+    color: #fff
+  .index-features__description
+    font-weight: 300
+.map__item
+  width: 95%
+  max-width: 1000px
+  display: block
+  position: relative
+  margin: auto
+.map__image
+  display: block
+  margin: auto
+  width: 95%
+  max-width: 1000px
+
+.map__location-item
+  background: red
+
+.map__location--phx
+  position: absolute
+  top: 40%
+  left: 17%
+  height: 10%
+  width: 5%
+  max-width: 20px
+  max-height: 20px
+  background: #fff
+  border: 2px solid #2F80ED
+  opacity: 0.8
+  border-radius: 50%
+  &::before
+    content: ''
+    height: 2px
+    width: 200%
+    background: #2F80ED
+    position: absolute
+    top: 50%
+    right: 125%
+    transform: translateY(-50%)
+  &::after
+    content: ''
+    width: 2px
+    opacity: 0.8
+    background: #2F80ED
+    height: 365%
+    left: -225%
+    bottom: 45%
+    position: absolute
+
+
+.map__location-name--phx
+  position: absolute
+  padding: 2% 5%
+  background: #3C6EB0
+  top: 15%
+  left: 2.5%
+
+
++respond-above('sm')
+  .map__location-name--phx
+    top: 20%
+  .map__location--phx
+
+    &::after
+      height: 375%
+
+
++respond-above('md')
+  .map__location-name--phx
+    top: 20%
+  .map__location--phx
+
+    &::before
+      width: 300%
+
+    &::after
+      height: 375%
+      left: -325%
