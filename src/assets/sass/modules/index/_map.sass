@@ -1,6 +1,6 @@
 .map
 
-  padding: 3em 0
+  padding: 5em 0
   background:
     color: #264E85
   h2, .index-features__description
@@ -21,6 +21,26 @@
 
 .map__location-item
   background: red
+
+
+@keyframes pulse
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: scale(7)
+    opacity: 0
+
+.map__location-pulse
+  position: absolute
+  height: 100%
+  width: 100%
+  background: none
+  border: 1px solid #ccc
+  border-radius: 50%
+  animation-name: pulse
+  animation-iteration-count: infinite
+  animation-duration: 4s
+
 
 .map__location--phx
   position: absolute
@@ -60,6 +80,12 @@
   background: #3C6EB0
   top: 15%
   left: 2.5%
+  text-transform: uppercase
+  font-weight: 400
+  letter-spacing: 0.1em
+  color: #fff
+  border-bottom: 3px solid #264e85
+  border-right: 3px solid #264e85
 
 
 +respond-above('sm')
@@ -74,11 +100,11 @@
 +respond-above('md')
   .map__location-name--phx
     top: 20%
+    padding: 1.5% 5%
   .map__location--phx
-
     &::before
       width: 300%
 
     &::after
-      height: 375%
+      height: 450%
       left: -325%
