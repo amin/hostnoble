@@ -8,8 +8,8 @@
 
   background:
     image: url('/assets/images/primary-banner__img.jpg')
-    position: center
-    size: cover
+    size: 400%
+    position-x: -150px
     attachment: fixed
     repeat: no-repeat
   +e('crown')
@@ -64,6 +64,11 @@
 
 +respond-above('md')
   .primary-banner
+    background:
+      size: cover
+      position: center
+      position-x: center
+      image: url('/assets/images/primary-banner__img.jpg')
     min-height: 600px
     height: 750px
     margin-top: -6.5em

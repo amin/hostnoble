@@ -6,8 +6,41 @@
   display: flex
 
 .review__item
-  width: 100%
-  padding: 1em
-  background: red
   display: flex
   flex-direction: column
+  letter-spacing: 0.1em
+  line-height: 1.5em
+
+.review__content
+  position: relative
+  font-weight: 300
+  color: #f2f2f2
+  border-radius: 0.25em
+  background:
+    color: #317EE5
+  padding: 3em 2em
+  &::before
+    content: ''
+    position: absolute
+    width: 2em
+    height: 2em
+    background: green
+    right: 3em
+    bottom: 0
+    transform: translateY(100%)
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 100%)
+.review__name
+
+  background: red
+
+
+.review__service
+
+  padding: 1em 0
+
+.review__footer
+  margin-top: 2em
+  display: flex
+  align-items: center
+  justify-content: space-between
