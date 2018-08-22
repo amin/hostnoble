@@ -4,43 +4,90 @@
 
 .review__wrap
   display: flex
+  flex-direction: column
 
 .review__item
   display: flex
   flex-direction: column
   letter-spacing: 0.1em
   line-height: 1.5em
+  margin-bottom: 2em
+
 
 .review__content
   position: relative
   font-weight: 300
   color: #f2f2f2
-  border-radius: 0.25em
-  background:
-    color: #317EE5
-  padding: 3em 2em
-  &::before
-    content: ''
-    position: absolute
-    width: 2em
-    height: 2em
-    background: green
-    right: 3em
-    bottom: 0
-    transform: translateY(100%)
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%)
-    clip-path: polygon(0 0, 100% 0, 100% 100%)
-.review__name
+  border-bottom-right-radius: 0.25em
+  border-bottom-left-radius: 0.25em
+  background-color: #1b467f
+  padding: 4em 2em
 
-  background: red
+  &::before
+    content: "“"
+    font-size: 8em
+    color: #6c9db8
+    position: absolute
+    opacity: 0.5
+    left: 15px
+    top: 60px
+    z-index: 100
+
+  &::after
+    content: "”"
+    font-size: 8em
+    color: #6c9db8
+    position: absolute
+    right: 15px
+    opacity: 0.5
+    bottom: -10px
+    z-index: 100
+.review__name
+  color: #f2f2f2
+  text-transform: uppercase
 
 
 .review__service
 
   padding: 1em 0
 
-.review__footer
-  margin-top: 2em
+.review__header
   display: flex
   align-items: center
-  justify-content: space-between
+  flex-wrap: wrap
+
+  padding: 1em
+  background:
+    color: #204372
+
+.review__avatar
+  display: flex
+  align-items: center
+  margin-right: 1.1em
+
+.review__location
+  margin-top: 1em
+  color: #c1c1c1
+  border-top: 1px solid rgba(199, 199, 199, 0.1)
+  padding-top: 1em
+  width: 100%
+
+.review__avatar-img
+  width: 64px
+  border-radius: 50px
+
++respond-above('md')
+  .review__wrap
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+  .review__item
+    width: 47.5%
+
+
++respond-above('lg')
+  .review__wrap
+    flex-wrap: nowrap
+  .review__item
+    width: 23%
+    margin-bottom: 0
