@@ -1,0 +1,51 @@
+.action
+  padding: 2em 0
+  background: rgb(38, 78, 133)
+  text-align: center
+  letter-spacing: 0.15em
+  +e('h2')
+    color: #f2f2f2
+    font-weight: 400
+    line-height: 1.5em
+  +e('p')
+    margin: 1em 0
+    font-weight: 300
+    color: #ccc
+  +e('button')
+    text-transform: uppercase
+    display: block
+    font-weight: 500
+    color: #fff
+    font-size: 1em
+    background: #2C6B59
+    text-decoration: none
+    padding: 1em
+    border-bottom: 7px solid #184F3E
+    +m('read')
+      display: none
+  +e('or')
+    display: none
+
++respond-above('md')
+  .action
+    +e('text')
+      text-align: left
+    +e('p')
+      margin: 0.4em 0 0 0
+    +e('content')
+      display: flex
+      justify-content: space-between
+    +e('or')
+      display: block
+      margin: 0 2em
+      text-transform: uppercase
+      color: #ccc
+    +e('buttons')
+      display: flex
+      align-items: center
+    +e('button')
+      padding: 1em 3em
+      +m('read')
+        display: block
+        background: #44719c
+        border-bottom: 7px solid #264062
